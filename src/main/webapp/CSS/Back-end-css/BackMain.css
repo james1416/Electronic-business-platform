@@ -1,0 +1,394 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+        v2.0 | 20110126
+        License: none (public domain)
+        */
+        html,
+        body,
+        div,
+        span,
+        applet,
+        object,
+        iframe,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        blockquote,
+        pre,
+        a,
+        abbr,
+        acronym,
+        address,
+        big,
+        cite,
+        code,
+        del,
+        dfn,
+        em,
+        img,
+        ins,
+        kbd,
+        q,
+        s,
+        samp,
+        small,
+        strike,
+        strong,
+        sub,
+        sup,
+        tt,
+        var,
+        b,
+        u,
+        i,
+        center,
+        dl,
+        dt,
+        dd,
+        ol,
+        ul,
+        li,
+        fieldset,
+        form,
+        label,
+        legend,
+        table,
+        caption,
+        tbody,
+        tfoot,
+        thead,
+        tr,
+        th,
+        td,
+        article,
+        aside,
+        canvas,
+        details,
+        embed,
+        figure,
+        figcaption,
+        footer,
+        header,
+        hgroup,
+        menu,
+        nav,
+        output,
+        ruby,
+        section,
+        summary,
+        time,
+        mark,
+        audio,
+        video {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            font: inherit;
+            vertical-align: baseline;
+        }
+
+        /* HTML5 display-role reset for older browsers */
+        article,
+        aside,
+        details,
+        figcaption,
+        figure,
+        footer,
+        header,
+        hgroup,
+        menu,
+        nav,
+        section {
+            display: block;
+        }
+
+        body {
+            line-height: 1;
+        }
+
+        ol,
+        ul {
+            list-style: none;
+        }
+
+        blockquote,
+        q {
+            quotes: none;
+        }
+
+        blockquote:before,
+        blockquote:after,
+        q:before,
+        q:after {
+            content: '';
+            content: none;
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+
+        body {
+            background: url("/CFA101G4/Img/pexels-photo-669996.jpeg");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            display: flex;
+            align-items: center;
+            margin-left: 10px;
+
+        }
+
+        .main {
+            width: 84%;
+            height: 95%;
+            margin-left: 10px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 5px;
+            position: relative;
+        }
+
+        .leftList {
+            width: 15%;
+            height: 95%;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 5px;
+            text-align: center;
+
+        }
+
+        img {
+            width: 90%;
+            margin-top: 10px;
+        }
+
+        .leftList ul {
+            margin-top: 30px;
+
+        }
+        ::-webkit-scrollbar {
+            width: 4px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(165, 160, 160, 0.9)
+        }
+
+
+        .leftList li {
+            margin: 10px auto;
+            text-align: center;
+            font-family: "微軟正黑體", sans-serif;
+            font-size: 20px;
+            border: 1px none whitesmoke;
+            border-bottom-style: solid;
+            padding: 5px;
+            border-radius: 10px;
+            width: 70%;
+        }
+
+        .leftList li:hover {
+            background: whitesmoke;
+            box-shadow: 1px 1px black;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .maintop {
+            margin: 0px auto;
+            width: 90%;
+            height: 7%;
+            text-align: center;
+            display: flex;
+            border: 3px none black;
+            border-bottom-style: inset;
+            padding-bottom: 5px;
+            position: relative;
+        }
+
+        .maintop img {
+            width: 20%;
+            margin-left: 10px;
+        }
+
+        .maintop .listname {
+            font-size: 30px;
+            line-height: 60px;
+            margin-left: 20px;
+            font-family: "微軟正黑體", sans-serif;
+        }
+
+        .maintop .hello {
+            height: 50%;
+            width: 20%;
+            font-size: 20px;
+            position: absolute;
+            font-family: "微軟正黑體", sans-serif;
+            right: 0px;
+            bottom: 0px;
+        }
+
+        .mainbody {
+            width: 100%;
+            height: 85%;
+            border: 1px whitesmoke none;
+            border-bottom-style: solid;
+            margin-top: 5px;
+            overflow: auto;
+            position: relative;
+            text-align: center;
+        }
+
+        .search {
+            width: 80%;
+            height: 5%;
+            margin: 2px auto;
+            text-align: right;
+        }
+
+        select {
+            height: 100%;
+            width: 10%;
+            }
+		#add{
+			margin-left:20px;
+			width:100px;
+			height:100%;
+		}
+		
+        
+
+        input {
+            height: 100%;
+            width: 20%;
+            margin-left: -2px;
+        }
+
+        button {
+            width: 5%;
+            height: 98%;
+            margin-left: -3px;
+            line-height: 50%;
+        }
+
+        table {
+            margin: 5px auto;
+        }
+
+        th,
+        td {
+            border: 1px whitesmoke none;
+            border-bottom-style: solid;
+            font-size: 20px;
+            font-family: "微軟正黑體", sans-serif;
+            padding: 10px;
+            text-align: center;
+        }
+
+        tr:nth-child(odd) {
+            background: rgba(131, 131, 131, 0.7);
+        }
+
+        .mainbody .maintr {
+            position: sticky;
+            background: whitesmoke;
+            top: 0px;
+        }
+
+        .leftList li ul {
+            display: none;
+        }
+
+        .leftList ul ul li {
+            font-size: 11px;
+        }
+
+        @keyframes show{
+            0%{height: 0px;}
+            100%{height: 84px;}
+        }
+        
+        .list {
+
+            height: 65%;
+            width: 100%;
+            overflow-y: scroll;
+        }
+        @keyframes litext{
+            0%{color: rgba(0, 0, 0, 0)}
+            0%{border: 1px  none;}
+            0%{border-color: rgba(131, 131, 131, 0);}
+            20%{color: rgba(0, 0, 0, 0);}
+            20%{border: 1px  none;}
+            50%{border-color: rgba(131, 131, 131, 0);}
+            100%{border-color: rgba(131, 131, 131, 0.9);}
+            100%{color: rgba(0, 0, 0, 1);}
+        }
+        .updata{
+            position: absolute;
+            width: 70%;
+            height: 91%;
+            z-index:10;
+            top: 5%;
+            right: 15%;
+            border-radius: 30px;
+            text-align: center;
+            background: url("/CFA101G4/Img/pexels-oleg-magni-2058128.jpg");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        #moretable{
+            width: 90%;
+            height: 20px;
+            margin-top: 10px;
+            text-align: center;
+            margin: 20px auto;
+            background: rgba(255,255, 255, 0.9);
+        }
+        #moretable caption{
+            margin-bottom: 10px;
+            background:rgba(255,255, 255, 0.9) ;
+            font-size: 30px;
+            border-radius: 10px;
+            padding: 5px;
+        }
+        #moretable th{
+            width: 30%;
+            line-height: 20px;
+            font-family: "微軟正黑體",sans-serif;
+        }
+        #moretable td{
+            width:70%;
+        }
+        .updata button{
+            height: 30px;
+            width: 100px;
+            margin:5px 5px 5px 5px;
+            border-radius: 10px;
+        }
+        .upbody{
+            height: 100%;
+            width: 100%;
+	       background: rgba(0,0,0,0.6);
+            border-radius: 5px;
+            position: absolute;
+            top:0px;
+            
+        }
+        #more:hover{
+            color: blue;
+            cursor: pointer;
+        }
+        select{
+        	width:100px;
+        }
+         .mainbody img{
+            width:70%;
+            height:90%;
+             margin-top: 50px;
+        }

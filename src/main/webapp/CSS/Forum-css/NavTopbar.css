@@ -1,0 +1,88 @@
+* {
+	box-sizing: border-box;
+}
+body {
+	background-image: url(/CFA101G4/Img/bg01.jpg);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+	background-size: cover;
+}
+#topbar {
+	padding-top: 2px;
+	padding-bottom: 2px;
+	width: 100%;
+	position: fixed;
+	top: 0px;
+	z-index: 2;
+}
+#postmyarticle{
+	color:rgba(177, 207, 207, 0.747);
+	cursor: pointer;
+}
+#USR {
+	width: 90%;
+	height:120px;
+	border-radius: 5px;
+}
+.side {
+	display: none;
+	height: 550px;
+	width: 160px;
+	position: absolute;
+	top: 55px;
+	left: 0;
+	background-color: rgba(124, 123, 123, 0.563);
+}
+a.nav-link >i , div#listbtn >i{
+	color: rgba(177, 207, 207, 0.582);
+	font-size: 1.5rem;
+	padding-bottom: 0px;
+	cursor: pointer;
+}
+div#listbtn >i:hover{
+	color: beige;
+}
+a.nav-link > i:hover{
+	color: beige;
+}
+#logo {
+	margin-left: 0;
+	margin-right: 0;
+	color: rgba(177, 207, 207, 0.582);
+	margin-left: 3px;
+}
+#logophot {
+	margin-left: 10px;
+	width: 150px;
+	height: auto;
+}
+ul#topfn>li.nav-item {
+	padding-left: 10px;
+	padding-right: 10px;
+}
+li.list-group-item>a {
+	color: rgba(177, 207, 207, 0.747);
+	text-decoration: none;
+}
+.list-group-item {
+	text-align: center;
+	background-color: rgba(255, 255, 255, 0);
+	padding: 20px 0px 30px 0px;
+}
+/* 人頭功能 */
+div#topfunction{
+	cursor: pointer;
+	display:none;
+	position: fixed;
+	top:7.5%;
+	right:0%;
+	z-index:2;
+}
+li#USRUID{
+	cursor: pointer;
+}
+#GOTOP:hover{
+	cursor: pointer;
+	color: blanchedalmond;
+}

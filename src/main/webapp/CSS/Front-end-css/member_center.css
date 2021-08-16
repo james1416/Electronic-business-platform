@@ -1,0 +1,1180 @@
+
+
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    
+    background-size: cover;
+    background-position:center;
+    background-attachment:fixed;
+    align-items: center;
+    background:#D3D3D3;
+}
+
+.topContainer{
+    width: 100%;
+    padding:0px;
+    margin:0 auto;
+    min-height: 150px;
+/*     border:1px solid black; */
+    background:#d3d3d3;
+}
+
+.navibar{
+    min-width: 1200px;
+    min-height: 40px;
+    color: black;
+    position: relative;
+}
+.personalData{
+    
+    width: 230px;
+    height: 30px;
+    position: absolute;
+    right: 0px;
+}
+.personalData button{
+    height: 30px;
+    width: 50px;
+    position: absolute;
+    bottom:5px;
+    right: 10px;
+    font-size: 10px;
+}
+
+.naviLeft{
+
+    width: 254px;
+    height: 25px;
+
+    color: black;
+    font-size: .8125rem;
+    font-weight: 300;
+    padding: 0 auto;
+    text-align: left;
+}
+.naviLeft a{    
+    margin-left: 10px;
+    text-decoration: none;
+    color:black;
+}
+.naviRight{
+    position: absolute;
+    width: 254px;
+    height: 25px;
+    top:18px;
+    color: black;
+    font-size: .8125rem;
+    font-weight: 300;
+    text-align: center;
+    right: 0px;
+}
+.naviRight a{
+    text-decoration: none;
+    margin: 0px 10px;
+    color:black;
+ 
+}
+.notice{
+    position: absolute;
+    width: 300px;
+    height: 445px;
+    border: 1px solid black;
+    right:187px;
+    z-index: 1;
+    background-color: white;
+    display: none;
+}
+
+.noticeTable{
+	border-collapse:collapse;
+    width: 298px;
+    height: 400px;
+    position: absolute;
+}
+
+.noticeTable th{
+    
+    width: 80px;
+    height: 70px;
+    text-align: center;
+   	font-size: 10px;
+}
+
+.noticeTable tr:nth-child(odd){
+	background-color:#dff0fa;
+}
+
+.JQellipsis{
+    font-size: 10px;
+}
+
+
+.watchmore{
+    position: absolute;   
+    width: 298px;
+    height: 43px;
+    bottom: 0px;
+    text-align: center;
+    font-weight: bolder;
+    background:#D3D3D3;
+}
+.watchmore a{   
+    color: black; 
+    display:block;
+    margin-top:10px;
+}
+
+.navibarBelow{
+    position: relative;
+    display: flex;
+    min-width: 1200px;
+    min-height: 110px;
+    
+}
+.logo{
+    display: flex;
+    height: 120px;
+    width: 120px;
+    margin-bottom:5px;
+    
+}
+.logo img{
+	margin-left:10px;
+    height: 120px;
+    width: 120px;
+    
+}
+.logoPeko{
+    height: 60px;
+    width: 215px;
+    margin: 20px 40px;
+    
+}
+.logoPeko img{
+    height: 100%;
+    width: 100%;;
+}
+.searchbar{
+    display: flex;
+    position: absolute;
+    top: 20%;
+    left: 30%;
+    width: 600px;
+    height: 50px;
+  	
+}
+.searchbar input{
+    width: 600px;
+    height: 50px;
+  	font-size:16px;
+}
+.searchbar div button{
+   
+    height: 50px;
+}
+.searchbar button:hover{
+    color: blue;
+}
+
+.searchbarBelow{
+
+  
+    height: 30px;
+    width: 598px;
+    position: absolute;
+    top: 60%;
+    left: 30%;
+    font-size: .8125rem;
+    font-weight: 300;
+
+}
+.searchbarBelow a{
+    text-decoration: none;
+    margin-right: 10px;
+}
+.searchbarBelow div{
+    text-align: center;
+    margin-top: 4px;
+}
+.TheContainer{
+    min-width: 1200px;
+    min-height: 1000px;
+    
+    position: relative;
+}
+.containerBody{
+    margin: 0px auto;
+    width: 100%;
+    position: relative;
+    background:#D3D3D3;
+}
+.containerBodyWrapper{
+	margin: 0px auto;
+	width: 1200px;
+	position:relative;
+}
+
+.containerRight{
+    width: 80%;
+    height: 530px;
+    background:#f0f8ff;
+    position: absolute;
+    right: 40px;
+    margin:40px auto;
+    border-radius:30px;
+}
+.myDocument{
+    width: 100%;
+    height: 80px;
+    
+    position:absolute;
+}
+.myDocument1{
+    width: 100%;
+    height: 20px;
+    margin-top: 20px;
+    margin-left:20px;
+    font-weight: bolder;
+}
+.myDocument2{
+    width: 100%;
+    height: 15px;   
+    margin-left:20px;
+    font-size: 10px;   
+}
+.inputCollection{
+    width: 100%;
+    height: 451px;
+/*    	background:white; */
+    position: absolute;
+    top: 80px;
+/*     border:1px solid black; */
+}
+
+.totalCount{
+    display: block;
+    position: absolute;
+    bottom: 40px;
+    font-size:10px;
+}
+.currentPage{
+    display: block;
+    position: absolute;
+    bottom: 40px;
+    left: 70px;
+    font-size:10px;
+}
+/* 0711 */
+.transactionLog{
+    width: 100%;
+    height: 18.4%;      
+/*     border: 1px solid black; */
+}
+.transactionLog:hover{
+	background-color:#D3D3D3;
+}
+.transactionDetails{
+    width: 95%;
+    height: 85%;
+/*     border: 1px solid black; */
+    margin: 0 auto;
+    display: flex;
+}
+.detailPics{
+/*     border: 1px solid black; */
+    width: 10%;
+    height: 100%;
+    margin-right: 20px;
+}
+.detail{
+/*     border: 1px solid black; */
+    width: 50%;
+    height: 100%;
+
+}
+.detail h4{
+	margin-top:8px;
+    margin-bottom: 8px;
+}
+.detail b{
+    font-size: 14px;
+    /* border: 1px solid black; */
+    margin-left: 20px;  
+    font-weight: lighter;
+}
+.balance{
+/*     border: 1px solid; */
+    width: 100%;
+    height: 22px;
+    margin-top: 3px;
+    font-size: 12px;
+    align-items: center;
+}
+.balance p {
+    margin-left: 19px;
+    margin-top: 2px;
+    font-weight: lighter;
+}
+
+.watchmoreDetails{
+/*     border: 1px solid black; */
+    width: 8%;
+    height: 100%;
+    margin-left: 272px;
+    padding-top:10px;
+
+}
+/* .buttonWMD{ */
+/*   	margin-top:0px; */
+/*     padding: 4px; */
+/*     margin: 20px 2px; */
+/* } */
+.btn btn-outline-secondary{
+	margin-top:5px !important;
+}
+
+/* 0711 */
+.inputCollectionLeft{
+    position: absolute;
+    width: 60%;
+    height: 450px;
+    left: 50px;
+    
+}
+.inputCollectionRight{
+    position: absolute;
+    width: 35%;
+    height: 450px;   
+    right: 30px;
+    
+}
+.buttonIcon {
+    background-color: orange;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 4px;
+    position: absolute;
+    right:120px;
+    margin-top: 15px;
+}
+.buttonIcon:hover {
+
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+.above{
+    position: absolute;
+    border: 1px solid black;
+    height: 300px;
+    width: 435px;
+    margin: 15px ;
+
+}
+
+.form{
+    position: absolute;
+    width: 90%;
+    height:400px;
+   
+}
+table{
+    
+    width: 500px;
+    height: 350px;
+    
+}   
+tr{
+    margin-top: 20px;
+}
+td{
+    
+    text-align: left;
+    margin: 20px auto;
+    padding:10px;
+}
+th{
+ text-align: right;
+}
+
+.button {
+    background-color: orange;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 4px;
+    position: absolute;
+    left: 150px;
+    margin-top: 15px;
+}
+.button:hover {
+
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.pictureUpload{
+    width: 280px;
+    height: 280px;
+   
+    margin: 20px auto;
+}
+.pictureUpload img{
+    width: 240px;
+    height: 200px;
+    
+    margin-left: 20px;
+}
+.chooseFile{
+    
+    width: 80%;
+    margin: 0 100px auto;
+}
+
+
+.containerLeft{
+    margin-left: 20px;
+    width: 180px;
+    height: 620px;
+   
+}
+.containerLeftHead{
+    width: 180px;
+    height: 81px;
+  
+    display: flex;
+}
+.icon{
+    width: 80px;
+    height: 75px;
+    
+    margin: 6px 0px;
+}
+.icon img{
+    width: 65px;
+    height: 65px; 
+}
+.accountContainer{
+    width: 112px;
+    height: 50px;
+
+    margin-top: 13px;
+}
+.accountName{
+    width: 110px;
+    height: 16.8px;
+    text-align: center;
+}
+.setting{   
+    width: 110px;
+    height: 30px;
+
+    text-align: center;
+}
+.setting a{
+    line-height: 30px;
+    text-decoration: none;
+}
+.containerLeftBody{
+	margin-top:20px;
+    width: 180px;
+    height: 500px;
+ 
+}
+.myAccountContainer{
+    width: 180px;
+    height: 80px;
+	display:none;
+}
+.myAccount{
+    width: 180px;
+    height: 20px;
+
+    display: flex;
+}
+.littleIcon img{
+    width: 20px;
+    height: 20px;
+
+}
+.myAccountFont{
+    width: 61px;
+    height: 16px;
+    text-align: center;
+}
+.myAccountFont a{
+    font-size: 10px;
+    text-decoration: none;
+}
+.myAccountSetting{
+    width: 180px;
+    height: 60px;
+    /* border: 1px solid black; */
+    position: relative;
+}
+.myAccountSettingRight{
+    position: absolute;
+    width: 160px;
+    height: 60px;
+	margin-top:20px;
+    right: 0px;
+}
+.myAccountInfo li{
+    margin-top: -10px;
+    list-style-type: none;	
+    margin-left: -30px;
+}
+.myAccountInfo a{
+    list-style-type: none;
+    text-decoration: none;
+    line-height: 35px;
+    font-size: 12px;
+    margin-left: 20px;
+   
+}
+.buyList{
+    width: 180px;
+    height: 100px;
+    margin-top:15px;
+    display:none;
+}
+.buyListDiv{
+    display: flex;
+    width: 180px;
+    height: 20px;
+    margin-top: 10px;
+   
+}
+.buyListIcon{
+    width: 20px;
+    height: 20px;
+    
+}
+.buyListIcon img{
+    width: 20px;
+    height: 20px;
+}
+.buyListFont{
+    width: 61px;
+    height: 16px;
+    text-align: center;
+}
+.buyListFont a{
+    font-size: 12px;
+    text-decoration: none;
+}
+.buyListSetting{
+    width: 180px;
+    height: 60px;
+ 
+    position: relative;
+}
+.buyListSettingRight{
+    position: absolute;
+    width: 160px;
+    height: 60px;
+
+    right: 0px;
+}
+.buylistInfo{
+    height: 60px;
+}
+.buyListInfo li{
+    margin-top: -10px;
+    list-style-type: none; 
+    margin-left: -30px;
+    
+}
+.buyListInfo a{
+    list-style-type: none;
+    text-decoration: none;
+    line-height: 35px;
+    font-size: 12px;
+    margin-left: 20px;
+   
+}
+
+.message{
+    margin-top: 10px;
+    width: 180px;
+    height: 35px;
+   
+}
+.messageDiv{
+    display: flex;
+    width: 180px;
+    height: 20px;
+   
+}
+.messageIcon{
+    width: 20px;
+    height: 20px;
+   
+}
+.messageIcon img{
+    width: 20px;
+    height: 20px;
+}
+.messageFont{
+    margin: 2px 5px;
+}
+.messageFont a{
+    font-size: 12px;
+    text-decoration: none;
+}
+.myCoupon{
+    width: 180px;
+    height: 35px;
+   
+}
+.myCouponDiv{
+    display: flex;
+    width: 180px;
+    height: 20px;
+   
+}
+.myCouponIcon{
+    width: 20px;
+    height: 20px;
+   
+}
+.myCouponIcon img{
+    width: 20px;
+    height: 20px;
+}
+.myCouponFont{
+    margin: 2px 5px;
+}
+.myCouponFont a{
+    font-size: 12px;
+    text-decoration: none;
+}
+.myWallet{
+    width: 180px;
+    height: 35px;
+    
+}
+.myWalletDiv{
+    display: flex;
+    width: 180px;
+    height: 20px;
+   
+}
+.myWalletIcon{
+    width: 20px;
+    height: 20px;
+   
+}
+.myWalletIcon img{
+    width: 20px;
+    height: 20px;
+}
+.myWalletFont{
+    margin: 2px 5px;
+}
+.myWalletFont a{
+    font-size: 12px;
+    text-decoration: none;
+}
+.myPrebuy{
+    width: 180px;
+    height: 35px;
+   
+}
+.myPrebuyDiv{
+    display: flex;
+    width: 180px;
+    height: 20px;
+  
+}
+.myPrebuyIcon{
+    width: 20px;
+    height: 20px;
+  
+}
+.myPrebuyIcon img{
+    width: 20px;
+    height: 20px;
+}
+.myPrebuyFont{
+    margin: 2px 5px;
+}
+.myPrebuyFont a{
+    font-size: 12px;
+    text-decoration: none;
+}
+.footer{
+    min-width: 75rem;
+    border-top: 4px solid #ee4d2d;
+    background:rgba(255, 255, 255, 0.925)
+}
+.footerBody{
+    
+    width: 100%;
+    padding:0px;
+    margin:0 auto;
+    min-height: 300px;
+  	background:#D3D3D3;
+}
+.footerUpperDiv{
+  min-width: 1200px;
+  height: 371.4px;
+
+  display: flex;
+}
+.customerService{
+    width: 20%;
+    height: 361.4px;
+  
+    position: relative;
+}
+.CScenter{
+    position: absolute;
+    width: 230px;
+    height: 13.82px;
+  
+    top: 50px;
+    left: 10px;
+}
+.CScenter span{
+    font-size: 10px;
+    font-weight: bold;
+}
+
+
+.CSList{
+    list-style-type: none;
+    position: absolute;
+    font-size: 10px;
+    top: 80px;
+    left: 10px;
+}
+.CSList li{
+    display: list-item;
+    margin-top: 8px;
+}
+.CSList a{
+    text-decoration: none;
+}
+
+
+
+
+
+
+.aboutUs{
+    width: 20%;
+    height: 361.4px;
+  
+    position: relative;
+}
+.aboutUsTitle{
+    position: absolute;
+    width: 230px;
+    height: 13.82px;
+   
+    top: 50px;
+    left: 10px;
+}
+.aboutUsTitle span{
+    font-size: 10px;
+    font-weight: bold;
+}
+.aboutUsList{
+    list-style-type: none;
+    position: absolute;
+    font-size: 10px;
+    top: 80px;
+    left: 10px;
+}
+.aboutUsList li{
+    display: list-item;
+    margin-top: 8px;
+}
+.aboutUsList a{
+    text-decoration: none;
+}
+
+
+
+.payment{
+    width: 20%;
+    height: 361.4px;
+  
+    position: relative;
+}
+.paymentTitle{
+    position: absolute;
+    width: 230px;
+    height: 13.82px;
+   
+    top: 50px;
+    left: 10px;
+}
+.paymentTitle span{
+    font-size: 10px;
+    font-weight: bold;
+}
+.paymentBodyTop{
+    width: 130px;
+    height: 37px;
+   
+    position: absolute;
+    top: 95px;
+    left: 10px;
+}
+.paymentBodyTopLogo{
+    width: 55px;
+    height: 29px;
+   
+}
+.paymentBodyTopLogo img{
+    width: 55px;
+    height: 29px;
+}
+.shipment{
+    position: absolute;
+    font-size: 10px;
+    font-weight: bold;
+    
+    top: 150px;
+    left: 10px;
+}
+.shipmentLogo1{
+    width: 170px;
+    height: 74px;
+    top: 170px;
+    left: 10px;
+    display: flex;
+    list-style-type: none;
+    position: relative;
+    
+}
+.shipmentLogo1 li{
+    width: 33%;
+    height: 20px;
+    display: inline-block;
+    margin: 25px auto;
+    
+}
+.shipmentLogo1 img{
+    width:60px;
+    height: 20px;
+
+}
+.shipmentLogo2{
+    width: 170px;
+    height: 74px;
+    
+    top: 170px;
+    left: 10px;
+    display: flex;
+    list-style-type: none;
+    position: relative;  
+}
+.shipmentLogo2 img{
+    width:100px;
+    height: 70px;
+    margin-right: 4px;
+}
+
+
+
+.followUs{
+    width: 20%;
+    height: 361.4px;
+    
+    position: relative;
+}
+.followUsTitle{
+    position: absolute;
+    width: 230px;
+    height: 13.82px;
+    
+    top: 50px;
+    left: 10px;
+}
+.followUsTitle span{
+    font-size: 10px;
+    font-weight: bold;
+}
+.followUsList{
+    list-style-type: none;
+    position: absolute;
+    font-size: 10px;
+    top: 80px;
+    left: 10px; 
+}
+.followUsList li{
+    display: list-item;
+    margin-top: 8px;
+}
+.followUsList a{
+    text-decoration: none;
+}
+
+
+
+
+.downloadAPP{
+    width: 20%;
+    height: 361.4px;
+   
+    position: relative;
+}
+.downloadAPPTitle{
+    position: absolute;
+    width: 230px;
+    height: 13.82px;
+   
+    top: 50px;
+    left: 10px;
+}
+.downloadAPPTitle span{
+    font-size: 10px;
+    font-weight: bold;
+}
+.pictureCollection{
+    
+    
+    width: 220px;
+    height: 86px;
+    margin-left: 10px;
+    margin-top: 90px;
+    display: flex;
+}
+.QRCodeHyperlink{
+    position: absolute;
+    width: 86px;
+    height: 86px;
+    
+    top: 90px;
+    left: 10px;
+}
+.downloadAPP img{
+    width: 86px;
+    height: 86px;
+}
+.pictureHyperlink{
+    height: 86px;
+    width: 134px;
+    position: absolute;
+    left: 100px;
+    
+}
+.pictureHyperlink img{
+    height: 30%;
+    width: 103px;
+    border-top: 2px solid #D3D3D3;   
+}
+
+/* 0715 */
+.updateNewPW{
+/*             border: 1px solid black; */
+            height:300px;
+            width: 400px;
+            margin:80px auto;
+            
+}
+.nowPW{
+/*             border: 1px solid black; */
+            display: flex;
+}
+.nowPWD{
+            margin-left: 20px;
+}
+.newPW{
+/*             border: 1px solid black; */
+            display: flex;
+            margin-top: 20px;
+}
+.newPWD{
+            margin-left: 20px;
+}
+.newPWDText{
+            margin-left: 16px;
+}
+.confirmPW{
+/*             border: 1px solid black; */
+            display: flex;
+            margin-top: 20px;
+}
+.confirmPWText{
+            margin-left: 16px;
+}
+.confirmPWD{
+            margin-left: 20px;
+}
+.checkOriginPW{
+/*             border: 1px solid black; */
+            width: 220px;
+            height: 20px;
+            margin-left: 100px;
+        }
+.changePWButton{
+	
+	display:block;	
+	margin:20px 20px 30px 155px;
+	padding:10px;
+	background-color:#ff4500;
+	color:white;
+}
+.nowPWD{
+	height:25px;
+}
+.newPWD{
+	height:25px;
+}
+.confirmPWD{
+	height:25px;
+}
+/* 0715 */
+
+/* 0718 */
+
+.chatroomOpen{
+
+    display:block;
+    bottom:15px;
+    right:30px;
+    position: fixed;
+    z-index: 1;
+}
+
+
+.chatroom{
+    background-color: white;
+    border: 1px solid black;
+    display:block;
+    bottom:15px;
+    right:5px;
+    width:449px;
+    height:350px;
+    position: fixed;
+    z-index: 1;
+    display:none;
+}
+.chatroomHeader{
+	border-width: thick; border-style:solid;
+    border: 1px solid black;
+    display: flex;
+    position: relative;
+    
+}
+.chatroomHeaderLeft{
+/*     border: 1px solid black; */
+    margin: 0 auto;
+    height: 20px;
+}
+.chatroomHeaderRight{
+	top:2px;
+	font-size:10px;
+    position: absolute;
+    right: 0px;
+    height: 20px;
+}
+.memberRow{
+/*     border: 1px solid black; */
+    position: absolute;
+    height: 93%;
+    width: 30%;
+}
+.messageArea{
+    height: 80%;
+    width: 70%;
+/*     border: 1px solid red; */
+    position: absolute;
+    right: 0px;
+    overflow: scroll;
+}
+.area{
+	margin:0px;
+	padding:0px;
+}
+.oneMember{
+	margin-top:3px;
+    height: 10%;
+    width: 100%;
+/*     border: 1px solid black; */
+    text-align: center;
+    line-height: 25px;
+}
+.messageArea li{
+    list-style-type: none;
+/*     border: 1px solid black; */
+    
+}
+.me{
+/*     border: 1px solid black; */
+    text-align: right;
+    background-color: lightblue;
+    
+}
+.friend{
+/*     border: 1px solid black; */
+    text-align: left;
+    background-color: gray; 
+}
+.me span{
+    font-size: 5px;
+    margin-right: 5px;
+}
+.friend span{
+    font-size: 5px;
+    margin-left: 5px;
+}
+.textbox{
+    position: absolute;
+    display: block;
+    bottom: 0px;
+    right: 63px;
+    width: 250px;
+    height: 45px;
+    font-size: 16px;
+}
+.sendMessage{
+    position: absolute;
+    display: block;
+    bottom: 0px;
+    right: 0px;
+    height: 46px;
+    width: 63px;
+}
+.connect{
+	position: absolute;
+    display: block;
+    bottom: 0px;
+    right: 163px;
+    width: 45px;
+    height: 45px;
+    font-size: 16px;
+}
+.disconnect{
+	position: absolute;
+    display: block;
+    bottom: 0px;
+    right: 63px;
+    width: 45px;
+    height: 45px;
+    font-size: 10px;
+}
+.getLink{
+	position: absolute;
+    display: block;
+    bottom: 0px;
+    right: 280px;
+    width: 45px;
+    height: 45px;
+    font-size: 10px;
+}

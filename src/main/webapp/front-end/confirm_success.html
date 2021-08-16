@@ -1,0 +1,41 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <style>
+        span{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <span><h1>恭喜您認證成功！</h1></span>
+
+    <div>
+        <span id="span">3</span>秒後跳轉登入頁面...
+    </div>
+<script>
+
+
+
+		    let num = 3;
+		    let id = setInterval(jump, 1000);
+		    let span = $("#span");
+		    function jump(){
+		        num --;
+		        span.html(num);
+		        if(num==0){
+		            clearInterval(id);
+		            location.href= "/CFA101G4/front-end/login.jsp";
+		        }
+		    }
+
+
+
+</script>
+    
+</body>
+</html>

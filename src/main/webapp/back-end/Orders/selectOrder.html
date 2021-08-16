@@ -1,0 +1,117 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css"
+	href="/CFA101G4/CSS/Back-end-css/Order-css/selectOrder.css">
+    <title>Document</title>
+</head>
+<body>
+   
+<div class="leftList">
+		<img src="/CFA101G4/Img/全部去背.png" alt="">
+		<ul class="list">
+			<li class="memberlist">會員總覽</li>
+			<li class="orderlist">訂單總覽</li>
+			<li class="pdlist">商品檢舉管理</li>
+			<li class="rplist">會員檢舉管理</li>
+			<li class="conlist">討論區檢舉管理</li>
+			<li class="newlist">最新消息管理</li>
+			<li class="qalist">Q&A管理</li>
+			<li class="aclist">討論區公告管理</li>
+			<li class="srlist">平台報表</li>
+			<li class="adminlist">管理員總覽</li>
+			<li class="autlist">權限管理</li>
+		</ul>
+	</div>
+	<div class="main" id="main">
+		<div class="maintop">
+			<img src="/CFA101G4/Img/Enlogo.png" alt="">
+			<span class="listname">訂單撥款</span>
+		</div>
+		<div class="search">
+		</div>
+		<div class="mainbody">
+			<table id="table">
+				<tr class="maintr">
+					<th>一般訂單編號</th>
+		            <th>買家會員編號</th>
+		            <th>賣家會員編號</th>
+		            <th>訂單金額</th>
+		            <th>訂單日期</th>
+		            <th>付款方式</th>
+		            <th>訂單狀態</th>
+		            <th>訂單分數</th>
+		            <th>操作</th>
+				</tr>
+			</table>
+		</div>
+	</div>
+
+
+
+
+<script type="text/javascript" src="/CFA101G4/JS/Back-end-js/LeftList.js"></script>
+<script>
+
+//  			let html="";
+ 			$.ajax({
+ 				url:"/CFA101G4/OrdersServlet",
+ 				type:"POST",
+ 				data:{action:"getLv7Orders"},
+ 				dataType:"json",
+ 				success:function(data){
+ 					console.log(data);
+ 					for(i=0;i<data.length;i++){
+ 					data[i].od_shipping==0?data[i].od_shipping='超商取貨':data[i].od_shipping='宅配配送';
+ 					
+ 					if(data[i].od_payment==0){
+ 						data[i].od_payment='信用卡'
+ 					}else if(data[i].od_payment==1){
+ 						data[i].od_payment='錢包付款'
+ 					}else if(data[i].od_payment==2){
+ 						data[i].od_payment='貨到付款'
+ 					}
+ 					let tr = `<tr>
+		 			            <td>${data[i].od_id}</td>
+		 			            <td>${data[i].od_bmemid}</td>
+		 			            <td>${data[i].od_smemid}</td>
+		 			            <td>${data[i].od_price}</td>
+		 			            <td>${data[i].od_date}</td>
+		 			            <td>${data[i].od_payment}</td>
+		 			            <td>${data[i].od_sta}</td>
+		 			            <td>${data[i].od_point}</td>
+		 			            <td><button type="button" id="submit" value="${data[i].od_id}">撥款</button></td>  
+		 			          </tr>`
+ 						$("#table").append(tr);
+ 					}
+ 					$("#listAllLv7Orders").prop("disabled", "true");
+ 				}
+ 			})
+ 		
+ 			$("#table").on("click", "[id~='submit']", function(e){
+ 				let value = $(this).val();
+ 				console.log(e.target)
+ 				console.log(value);
+ 				$.ajax({
+ 					url:"/CFA101G4/OrdersServlet",
+ 					type:"POST",
+ 					data:{
+ 						"action":"appropriation",
+ 						"od_id":value
+ 					},
+ 					success:function(data){
+ 						console.log(data);
+ 						$(e.target).prop("disabled", "true");
+ 					}
+ 				})
+ 			})
+ 	
+    </script>
+</body>
+</html>

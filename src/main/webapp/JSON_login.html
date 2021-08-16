@@ -1,0 +1,33 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/CFA101G4/CSS/Back-end-css/BackLogin.css">
+    <title>Document</title>
+</head>
+<body >
+    <div class="login">
+        <h1>管理員登入</h1>
+        <img src="/CFA101G4/Img/全部去背.png" alt="">
+        <h2>帳號</h2>
+        <input type="text" placeholder="請輸入管理員帳號" id="acc">
+        <h2>密碼</h2>
+        <input type="password" placeholder="請輸入管理員密碼" id="pw">
+        <button id="submit">登入</button>
+    </div>
+    <script>
+        $("#submit").click(function(e) {
+            $.ajax({
+                url:"/CFA101G4/AdminServlet",
+                data:{adminacc:$('#acc').val(),
+                adminpw:$('#pw').val()},
+            	success:function(url) {
+                	window.location.href = "/CFA101G4/BackIndex.html"
+            	}
+            })
+        })
+    </script>
+</body>
+</html>

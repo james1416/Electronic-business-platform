@@ -1,0 +1,33 @@
+* {
+	box-sizing: border-box;
+}
+
+div.col-9, div.col-3, div.col-10,div.col-11{
+	padding: 0;
+}
+
+body {
+	background-image: url(/CFA101G4/Img/bg01.jpg);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+	background-size: cover;
+}
+
+div.row {
+	margin: 0px 0px 0px 0px;
+}
+textarea#myArticleText{
+	outline-style: none;
+	height: 80px;
+	 resize: none;
+	width: 100%;
+	 overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+	white-space: normal;
+	margin-bottom: 0px;
+}

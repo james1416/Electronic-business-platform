@@ -1,0 +1,322 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src=""></script>
+    <title>Document</title>
+    <script type="text/javascript" src="../JS/Front-end-js/taiwan_address_auto_change.js"></script>
+    <link rel="shortcut icon" href="#"/>
+    <style>
+        /* http://meyerweb.com/eric/tools/css/reset/
+        v2.0 | 20110126
+        License: none (public domain)
+        */
+        html, body, div, span, applet, object, iframe,
+        h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+        a, abbr, acronym, address, big, cite, code,
+        del, dfn, em, img, ins, kbd, q, s, samp,
+        small, strike, strong, sub, sup, tt, var,
+        b, u, i, center,
+        dl, dt, dd, ol, ul, li,
+        fieldset, form, label, legend,
+        table, caption, tbody, tfoot, thead, tr, th, td,
+        article, aside, canvas, details, embed,
+        figure, figcaption, footer, header, hgroup, 
+        menu, nav, output, ruby, section, summary,
+        time, mark, audio, video {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            font: inherit;
+            vertical-align: baseline;
+        }
+        /* HTML5 display-role reset for older browsers */
+        article, aside, details, figcaption, figure, 
+        footer, header, hgroup, menu, nav, section {
+            display: block;
+        }
+        body {
+            line-height: 1;
+        }
+        ol, ul {
+            list-style: none;
+        }
+        blockquote, q {
+            quotes: none;
+        }
+        blockquote:before, blockquote:after,
+        q:before, q:after {
+            content: '';
+            content: none;
+        }
+
+        body{
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            background-image: url(/CFA101G4/Img/CSS_pic/thumb-1920-693905.jpg);
+        }
+        .login{
+           width: 450px;
+           height: 780px;
+           margin: 0px auto;
+           position: relative;
+           background-color: #D3D3D3;
+           opacity: 80%;
+        }
+        input[type="text"], input[type="password"]{
+            font-size: 16px;
+            font-family: "微軟正黑體",sans-serif;
+            padding: 5px;
+            border-radius: 4px;
+            margin: 20px auto;
+            display: block;
+            width: 100%;
+        }
+        button{
+            border: 1px solid black 0.5;
+            padding:4px 8px;
+            font-family: "微軟正黑體",sans-serif;
+            background: white;
+            color: black;
+            margin: 20px auto;
+            border-radius: 5px;
+        }
+        img{
+            width: 90%;
+            text-align:center;
+            line-height:20px;
+        }
+
+        table{
+        	width:90%;
+            margin-top: -20px;
+        }
+        td{	
+            width: 300px;
+        }
+        th{
+        	font-size:18px;
+        }
+        .submit{
+            position:absolute;
+            left: 182px;
+            bottom: 40px;
+        }
+        .response{
+        	margin:0px auto;  	
+        }
+        #checkAcc{
+        	position:absolute;
+        	right:150px;
+        	top:110px;
+        }
+		.register{
+			font-size:30px;
+			width:200px;
+			text-align:center;
+			margin:0 auto;
+			top:30px;
+		}
+        
+    </style>
+</head>
+<body>
+<div class="login">
+        <div class="register">會員註冊</div>
+ <table>
+ 	
+     <form id="form">   
+        <tr><th>帳號</th><td><input type="text" placeholder="請輸入帳號" name="account" id="account"></td><span id="checkAcc"></span></tr>
+        <tr><th>密碼</th><td><input type="password" placeholder="請輸入密碼" name="password" id="password"></td></tr>         
+        <tr><th>姓名</th><td><input type="text" placeholder="請輸入姓名" name="membername" id="membername"></td></tr>        
+        <tr><th>地址</th><td><input type="text" placeholder="請輸入地址" name="address" id="address"></td></tr>        
+        <tr><th>信箱</th><td><input type="text" placeholder="請輸入信箱" name="email" id="email"></td></tr> 
+        <tr><th>手機</th><td><input type="text" placeholder="請輸入手機" name="tel" id="tel"></td></tr>
+        <tr><th>身分證字號</th><td><input type="text" placeholder="請輸入身分證字號" name="UID" id="UID"></td></tr>
+        <tr><th>生日</th><td><input type="date" name="bth" id="bth"></td></tr><br><br>                     
+        <tr><th>性別</th><td><span>男</span><input type="radio" name="sex" value="1"><span>女</span><input type="radio" name="sex" value="0" checked></td></tr>        
+        <button type="button" id="submit" class="submit">註冊會員</button>
+     </form> 
+</table>      
+        <div class="response" id="response"></div>
+</div>
+    <script>
+    var timestamp = new Date().getTime();
+    console.log(timestamp);
+    	var checkflag = false;
+		function checkAccountisExist(){
+			let account = $("#account").val();
+			
+			$.ajax({
+				url: "/CFA101G4/registerServlet",
+				type:"POST",
+				data:{
+					account:account,
+					action:"checkAccExist"
+				},
+				dataType:"json",
+				success:function(data){
+					if(data.userExist==true){
+						$("#checkAcc").css("color", "green");
+						$("#checkAcc").html(data.msg);
+						checkflag=true;
+
+					}else{
+						$("#checkAcc").css("color", "red");
+						$("#checkAcc").html(data.msg);
+						checkflag=false;
+
+					}
+				}
+			})
+			
+		}
+        function checkAccount(){
+            let account = $("#account").val();
+            let reg_account = /^\w{5,15}$/;
+            let flag = reg_account.test(account);
+            if(flag){
+                $("#account").css("border", "5px solid green");
+            }else{
+                $("#account").css("border", "5px solid red");
+            }
+            return flag;
+        }
+        function checkPassword(){
+            let password = $("#password").val();
+            let reg_password = /^\w{5,15}$/;            
+            let flag = reg_password.test(password);
+            if(flag){
+                $("#password").css("border", "5px solid green");
+            }else{
+                $("#password").css("border", "5px solid red");
+            }
+            return flag;
+        }
+
+
+        function checkMembername(){
+            let membername = $("#membername").val();
+            let reg_membername = /^[\u4e00-\u9fa5\w]{2,15}$/;
+            let flag = reg_membername.test(membername);
+            if(flag){
+                $("#membername").css("border", "5px solid green");
+            }else{
+                $("#membername").css("border", "5px solid red");
+            }
+            return flag;
+        }
+        function checkUID(){
+            let UID = $("#UID").val();
+            let reg_UID = /^[A-Z]{1}\d{9}$/;
+            let flag = reg_UID.test(UID);
+            if(flag){
+                $("#UID").css("border", "5px solid green");
+            }else{
+                $("#UID").css("border", "5px solid red");
+            }
+            return flag;
+        }
+        function checkAddress(){
+            let address = $("#address").val();
+            let reg_address = /^[\u4e00-\u9fa5\w]{5,100}$/;	
+            let flag = reg_address.test(address);
+            if(flag){
+                $("#address").css("border", "5px solid green");
+            }else{
+                $("#address").css("border", "5px solid red");
+            }
+            return flag;
+
+        }
+        function checkBth(){
+            let bth = $("#bth").val();
+            console.log(bth);
+            let flag = true;
+            if(bth!=""){
+                $("#bth").css("border", "5px solid green");
+                flag = true;
+            }else{
+                $("#bth").css("border", "5px solid red");
+                flag = false;
+            }
+            return flag;
+
+        }
+        function checkEmail(){
+            let email = $("#email").val();
+            let reg_email = /^\w+@\w+\.\w+$/;
+            let flag = reg_email.test(email);
+            if(flag){
+                $("#email").css("border", "5px solid green");
+            }else{
+                $("#email").css("border", "5px solid red");
+            }
+            return flag;
+        }
+        function checkTel(){
+            let tel = $("#tel").val();
+            let reg_tel = /^09\d{8}$/;
+            let flag = reg_tel.test(tel);
+            if(flag){
+                $("#tel").css("border", "5px solid green");
+            }else{
+                $("#tel").css("border", "5px solid red");
+            }
+            return flag;
+        }
+
+        let bth = $("#bth").val();
+        console.log(bth);
+        
+        
+                //用入口函數調用所有input方法
+        $(function(){
+        	
+            $("#submit").on("click", function(){      
+            	var timestamp = new Date().getTime();
+                      if(checkflag && checkAccount() && checkPassword() && checkMembername() && checkUID() && checkAddress() && checkBth() && checkEmail() && checkTel() ){        
+                  	     
+                            $.ajax({
+                                url: "/CFA101G4/registerServlet?"+timestamp,
+                                type:"POST",
+                                data:$("#form").serialize()+"&action=register",
+                                success:function(data){
+                                   console.log(data);
+                                   window.location.assign("/CFA101G4/front-end/register_success.html")
+//                                    
+                                },
+                                error:function(){
+                                	alert("會員註冊失敗！請檢查您的資料格式是否皆正確");
+                                }                       	
+                            })
+                        }else{
+                        	alert("請檢查您的資料是否皆正確，且不可有任何一欄為空！");
+                            return false;
+                        }   
+         })
+    })
+ 
+
+            $("#account").on("input", checkAccount);
+       		$("#account").on("blur", checkAccountisExist);
+            $("#password").on("input", checkPassword);
+            $("#membername").on("input", checkMembername);
+            $("#UID").on("input", checkUID);
+            $("#address").on("input", checkAddress);
+            $("#bth").on("input", checkBth);
+            $("#email").on("input", checkEmail);
+            $("#tel").on("input", checkTel);
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,8 @@
+a {
+        text-decoration: none;
+        color: cadetblue;
+    }
+
+    a:hover {
+        color: darkgray;
+    }

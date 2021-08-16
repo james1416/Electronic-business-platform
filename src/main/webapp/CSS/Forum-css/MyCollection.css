@@ -1,0 +1,21 @@
+body {
+	background-image: url(/CFA101G4/Img/bg01.jpg);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+	background-size: cover;
+}
+* {
+	box-sizing: border-box;
+}
+p#coltext{
+	max-height:100px;
+	height:100px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+	white-space: normal;
+}

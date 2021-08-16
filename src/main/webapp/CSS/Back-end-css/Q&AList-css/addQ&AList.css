@@ -1,0 +1,104 @@
+   /* http://meyerweb.com/eric/tools/css/reset/
+        v2.0 | 20110126
+        License: none (public domain)
+        */
+        html, body, div, span, applet, object, iframe,
+        h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+        a, abbr, acronym, address, big, cite, code,
+        del, dfn, em, img, ins, kbd, q, s, samp,
+        small, strike, strong, sub, sup, tt, var,
+        b, u, i, center,
+        dl, dt, dd, ol, ul, li,
+        fieldset, form, label, legend,
+        table, caption, tbody, tfoot, thead, tr, th, td,
+        article, aside, canvas, details, embed,
+        figure, figcaption, footer, header, hgroup, 
+        menu, nav, output, ruby, section, summary,
+        time, mark, audio, video {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            font: inherit;
+            vertical-align: baseline;
+        }
+        /* HTML5 display-role reset for older browsers */
+        article, aside, details, figcaption, figure, 
+        footer, header, hgroup, menu, nav, section {
+            display: block;
+        }
+        body {
+            line-height: 1;
+        }
+        ol, ul {
+            list-style: none;
+        }
+        blockquote, q {
+            quotes: none;
+        }
+        blockquote:before, blockquote:after,
+        q:before, q:after {
+            content: '';
+            content: none;
+        }
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+        body{
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+            background: url("/CFA101G4/Img/pexels-photo-669996.jpeg");
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+        }
+        .login{
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            background:rgba(255, 255, 255, 0.9);
+            text-align: center;
+            color: black;
+            font-family: "微軟正黑體",sans-serif;
+            border-radius: 10px;
+            padding: 30px;
+            width: 50%;
+        }
+        button ,input{
+            border: 1px solid black 0.5;
+            padding:4px 8px;
+            font-family: "微軟正黑體",sans-serif;
+            background: white;
+            color: black;
+            margin: 20px auto;
+            border-radius: 5px;
+        }
+        img{
+            width: 50%;
+            margin: 20px auto;
+        }
+        h1{
+            font-size: 20px;
+        }
+        @media(max-width:450px){
+            .login{
+                width: 60%;
+            }
+        }
+        h2{
+            margin-top: 10px;
+        }
+        textarea{
+            font-size: 16px;
+            font-family: "微軟正黑體",sans-serif;
+            padding: 5px;
+            border-radius: 4px;
+            margin: 10px auto;
+            display: block;
+            width: 80%;
+            height: 100px;
+        }

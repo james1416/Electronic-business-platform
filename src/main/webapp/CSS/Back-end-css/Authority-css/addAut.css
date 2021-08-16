@@ -1,0 +1,34 @@
+.modal-header{
+	width: 100%;
+    height: 50px;
+    text-align: center;
+	}
+.modal-body{
+	text-align:center;
+	}
+.modal-footer{
+    margin-top:20px;
+    height: 70px;
+    width: 100%;
+	}
+.btn-default , .btn-primary{
+    height: 100%;
+    width: 100px;
+    }
+.modal.in .modal-dialog{
+	margin-top:200px
+}
+.autname{
+	margin:5px auto;
+	height: 40px;
+    width: 100%;
+}
+.autname input{
+	margin-left:10px;
+	height: 100%;
+    width: 50%;
+    font-size:20px;
+}
+input.autid{
+	background:#BEBEBE;
+}

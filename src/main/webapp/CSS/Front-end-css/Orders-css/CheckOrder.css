@@ -1,0 +1,147 @@
+         /* ----------------- cssres ------------------- */
+
+         /* ----------------- header ------------------- */
+        i{
+        	font-style:normal;
+         }
+        header{
+            width: 100%;
+            border: 1px darkgray solid;
+            height: 120px;
+        }
+        .header-body{
+            width: 100%;
+            height: 100%;
+            margin: 0px auto;
+            position: relative;
+        }
+        .header-body-top{
+            height: 25%;
+            width: 100%;
+            position: relative;
+        }
+        .header-body-mid{
+            display: flex;
+            height: 75%;
+            width: 100%;
+            margin: 0px auto;
+            position: relative;
+            justify-content:space-around;
+            text-align: center;
+            
+        }
+        .header-body-mid-left{
+            width: 200px;
+            height: 100%;
+        }
+        .header-body-mid-left img{
+            margin-top: 25px;
+            height: 50%;
+            width: 100%;
+        }
+        .input-group{
+            margin-left: 20px;
+            margin-top: 25px;
+            width: 70%;
+            height: 50%;
+        }
+        .btn-outline-secondary{
+            background: white;
+        }
+        .header-body-top-rigth{
+            width: 27%;
+            position : absolute;
+            right: 0px;
+            display: flex;
+        }
+        .navbar-brand{
+            height: 100%;
+            width: 100%;
+            line-height: 15px;
+        }
+        .header-body-mid-cart{
+            margin-right: 30px;
+            margin-top: 15px;
+            position: relative;
+        }
+        .bi-cart2{
+            padding-top: 50px;
+            font-size:50px;
+        }
+        .header-body-mid-cart-sum{
+            background: black;
+            border-radius: 999px;
+            font-size: 20px;
+            position: absolute;
+            right: -8px;
+            width: 23px;
+            text-align: center;
+            color: white;
+        }
+        .nav{
+            width: 100%;
+        }
+        .header-body-top-rigth-ul{
+            display: flex;
+        }
+        .header-body-top-rigth-li{
+            overflow: hidden;
+            height: 80%;
+        }
+        /* ----------------- header ------------------- */
+
+
+
+
+
+
+
+        /* nav-body ----------------- */
+        .nav-body{
+            width: 100%;
+            height: 1000px;
+            border: black 1px solid;
+            display: flex;
+        }
+      	.card-img-top{
+      		width: 100%;
+            height: 100%;
+      	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        /* ----------------- footer ------------------- */
+        
+        .footer-body{
+            width: 100%;
+            height: 140px;
+            border:  1px darkgray solid;
+            display: flex;
+            justify-content: center;
+        }
+        .flex-column{
+            text-align: center;
+        }
+
+        /* ----------------- footer ------------------- */
+        

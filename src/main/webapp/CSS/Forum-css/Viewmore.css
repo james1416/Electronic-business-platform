@@ -1,0 +1,15 @@
+div.col-9, div.col-3, div.col-10,div.col-11{
+	padding: 0;
+}
+div.row {
+	margin: 0px 0px 0px 0px;
+}
+div#tiele {
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 1;
+	-webkit-box-orient: vertical;
+	white-space: normal;
+}
